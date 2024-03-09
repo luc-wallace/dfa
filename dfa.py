@@ -43,7 +43,7 @@ class DFA:
                     p = self.delta[(i, symbol)]
                     q = self.delta[(j, symbol)]
                 except KeyError:
-                    raise Exception(f"DFA is incomplete")
+                    raise Exception("DFA is incomplete")
                 pqkey = tuple(sorted([p, q]))
                 if p == q:
                     continue
